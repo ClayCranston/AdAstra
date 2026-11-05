@@ -1,0 +1,53 @@
+{
+  "id": "local-accountability",
+  "problem": "Create a local-first accountability workspace for friends, with real organization isolation and private goal detail.",
+  "primary_action": "Check in on today's commitments and review shared group status.",
+  "content_fixture": {
+    "profiles": ["Clay (owner)", "Eames (member)"],
+    "organizations": ["original"],
+    "categories": ["Gym", "Work", "Mind", "Fitness", "Nutrition", "Money"]
+  },
+  "states": [
+    "logged out",
+    "partial progress",
+    "completed",
+    "no scheduled goals",
+    "empty organization",
+    "private goal",
+    "group member",
+    "non-member",
+    "unconfigured Google OAuth",
+    "local email preview"
+  ],
+  "viewports": [
+    { "width": 1440, "height": 1000 },
+    { "width": 390, "height": 844 }
+  ],
+  "feature_signal_ids": [
+    "lightweight-local",
+    "supportive-banter",
+    "private-by-default",
+    "organization-hierarchy"
+  ],
+  "acceptance_criteria": [
+    "Docker launch with durable SQLite",
+    "Local profiles work without provider accounts",
+    "Google provider is available only when credentials exist",
+    "Check-ins persist",
+    "Cross-organization access is denied",
+    "Private fields never enter peer payloads",
+    "Group view only shows that group's shared goals",
+    "Keyboard and mobile navigation work",
+    "No emails sent externally"
+  ],
+  "budgets": {
+    "external_runtime_services": 0,
+    "animation_libraries": 0,
+    "image_libraries": 0
+  },
+  "protected_behavior": [
+    "User-approved privacy defaults",
+    "Lightweight local deployment",
+    "No account connections or public publication"
+  ]
+}

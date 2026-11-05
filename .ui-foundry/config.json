@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "project": {
+    "root": ".",
+    "package_file": "package.json",
+    "package_manager": "npm",
+    "frameworks": [
+      "next",
+      "react"
+    ],
+    "scripts": {
+      "dev": "next dev --hostname 127.0.0.1 --port 3000",
+      "build": "next build",
+      "start": "node scripts/start.mjs",
+      "typecheck": "tsc --noEmit",
+      "test": "tsx --test tests/*.test.ts",
+      "worker": "tsx scripts/worker.ts",
+      "smoke": "node scripts/smoke.mjs"
+    },
+    "detected_routes": [
+      "/",
+      "/login",
+      "/api/workspace",
+      "/api/auth/[...nextauth]",
+      "/api/health"
+    ]
+  },
+  "creative_intensity": 6,
+  "quality": {
+    "viewports": [
+      {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      }
+    ],
+    "keyboard_required": true,
+    "touch_required": true,
+    "reduced_motion_required": true,
+    "baseline_required": true
+  },
+  "artifacts": {
+    "briefs": ".ui-foundry/briefs",
+    "experiments": ".ui-foundry/experiments",
+    "evidence": ".ui-foundry/evidence",
+    "reports": ".ui-foundry/reports"
+  }
+}
